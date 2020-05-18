@@ -31,8 +31,8 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
 
-    private String[] validList= {"202000","2000"};
-    private String[] inValidList= {"20200","2021","2003"};
+    private String[] validList= {"202000","2000","2024","1984"};
+    private String[] inValidList= {"20200","2021","2003","1700","1900"};
     
     
     public void testisLeap()
