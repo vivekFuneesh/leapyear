@@ -1,5 +1,8 @@
 package com.vivek.leapyear;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -28,10 +31,19 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
 
+    private String[] validList= {"202000","2000"};
+    private String[] inValidList= {"2021","2003"};
+    
+    
     public void testisLeap()
     {
-    	String year="20009";
-        assertTrue(App.isLeapYear(year));
+    	int i=-1;
+    	while(++i<validList.length)
+        assertTrue("Year "+validList[i]+" is a valid leap year but code says INvalid",App.isLeapYear(validList[i]));
+    	i=-1;
+    	while(++i<inValidList.length)
+        assertFalse("Year "+inValidList[i]+" is an INvalid leap year but code says VALID",App.isLeapYear(inValidList[i]));
+    
     }
     
     
