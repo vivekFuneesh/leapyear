@@ -15,6 +15,9 @@ public class App
     
     static boolean isLeapYear(String year) {
     	Integer y=Integer.valueOf(year);
+    	
+    	if(y%100==0 && y%400!=0)return false;
+    	
     	if(y%400==0)
     		return true;
     	return false;
