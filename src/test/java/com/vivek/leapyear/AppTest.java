@@ -32,7 +32,7 @@ public class AppTest
     }
 
     private String[] validList= {"202000","2000"};
-    private String[] inValidList= {"2021","2003"};
+    private String[] inValidList= {"20200","2021","2003"};
     
     
     public void testisLeap()
